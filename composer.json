@@ -9,6 +9,11 @@
             "email": "domingollanes.dev@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "DomingoLlanes//StrongParametersBundle//": "src/"
+        }
+    },
     "require": {
         "php": "^5.5.9 || ^7.0",
         "symfony/symfony": "^3.4"
