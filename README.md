@@ -7,7 +7,7 @@ You can simply allow and deny items from parameters.
 
 This bundle is really useful for APIs, but can be used in any application.
 
-**ALERT:** this is a early version.
+**ALERT:** this is an early version.
 
 Tested only in Symfony 3.4.
 
