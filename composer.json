@@ -1,0 +1,15 @@
+{
+    "name": "domingollanes/strong-parameters-bundle",
+    "description": "Strong parameters from Rails inside Symfony",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Domingo Llanes",
+            "email": "domingollanes.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0"
+    }
+}

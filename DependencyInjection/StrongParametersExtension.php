@@ -22,7 +22,23 @@ class StrongParametersExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $strongParametersResource = array_key_exists('strong_parameters', $config) ?
+            $config['strong_parameters']['resource'] :
+            "%kernel.project_dir%/app/Resources/parameters/";
+        $strongParametersException = array_key_exists('strong_parameters', $config) ?
+            $config['strong_parameters']['exception'] :
+            false;
+
+        $container->setParameter('strong_parameters.resource', $strongParametersResource);
+        $container->setParameter('strong_parameters.exception', $strongParametersException);
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        //$loader->load('config.yml');
+    }
+
+    public function getAlias()
+    {
+        return 'strong_parameters';
     }
 }

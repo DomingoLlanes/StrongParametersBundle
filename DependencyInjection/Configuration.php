@@ -24,6 +24,13 @@ class Configuration implements ConfigurationInterface
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
 
+        $rootNode
+            ->children()
+                ->scalarNode('resource')->defaultValue('%kernel.project_dir%/app/Resources/parameters/')->end()
+                ->booleanNode('exceptions')->defaultValue(false)->end()
+            ->end()
+        ;
+
         return $treeBuilder;
     }
 }

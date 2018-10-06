@@ -1,4 +1,6 @@
 services:
-#    strong_parameters.example:
-#        class: DomingoLlanes\StrongParametersBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  DomingoLlanes\StrongParametersBundle\Service\ParametersService:
+    #alias: "strong_parameters.parameters"
+    arguments:
+      - "%strong_parameters.resource%"
+      - "%strong_parameters.exception%"

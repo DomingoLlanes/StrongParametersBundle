@@ -1,3 +1,0 @@
-strong_parameters_homepage:
-    path:     /
-    defaults: { _controller: StrongParametersBundle:Default:index }

@@ -1,0 +1,3 @@
+strong_parameters:
+  resource: '%kernel.project_dir%/app/Resources/parameters/'
+  exceptions: false
